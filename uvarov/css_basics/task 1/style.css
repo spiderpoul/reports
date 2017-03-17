@@ -1,0 +1,39 @@
+html {
+    font-family: "Arial", sans-serif;
+    font-size: 16px;
+}
+
+header {
+	color: red;
+	font-size: 2rem;
+    background-color: rgba(0,255,0,0.1);
+}
+
+h1 {
+    padding: 10px;
+}
+
+.header-image {
+    height: 200px;
+    background-image: url(CMS_Creative_164657191_Kingfisher.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 5px;
+    
+}
+
+h2, p {
+    font-family: "Times New Roman", serif;
+}
+
+#mauris {
+    font-size: 1.5vw;
+}
+
+#aliquam {
+    font-size: 2vh;
+}
+
+.rhoncus {
+    
+}
