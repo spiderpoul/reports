@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+    </head>
+    <body>
+        
+        <style type="text/css">                       
+            body {
+                background: url(prestashop.jpg);  
+                background-repeat: repeat;
+            }
+            
+            .form-report{
+                padding: 30px 0 0 0;
+                margin: 0;
+                opacity: 0.9;
+                transition: 1s
+            }
+            
+            .form-report:hover{    
+                opacity: 1; 
+            }
+            
+            
+            .form-report form {
+                width: 400px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #ffffff;
+                border-radius: 10px;
+                box-shadow: 0 0 10px #cccccc;            
+            }
+            .form-report label{
+                display: block;
+                margin: 0 auto;
+                margin-bottom: 10px;
+            }
+            
+            .form-report input,
+            .form-report textarea {
+                width: 95%;
+                margin: 0 0 10px 0;
+                padding: 2px 5px;
+                border: 1px solid #cccccc;
+                border-radius: 5px;
+                vertical-align: middle;
+            }
+            
+            .form-report .field-checkbox input{               
+                width: 2.5%;
+                margin: 0 5px 0 10px;
+                padding: 0px;
+                border: none;
+            }
+            
+            .opera .form-report .field-checkbox input{               
+                width: 2.5%;
+                margin: 0 5px 0 10px;
+                padding: 0px;
+                border: none;
+            }
+            
+            .form-report .field-checkbox p{                
+                display: inline-block; 
+                vertical-align: middle; 
+                padding: 0px !important;
+                margin: 0px !important;
+            }
+            
+            .form-report .field-checkbox{                                
+                padding-bottom: 10px !important;           
+            }
+                        
+            
+            .form-report input {
+                height: 24px;
+            }
+            
+            .form-report .buttons input[type="submit"] {
+                display: block;
+                width: 170px;
+                height: 30px;
+                margin: 0 auto;                
+                color: #ffffff;
+                background-color: darkseagreen;
+                border: none;
+                border-radius: 5px;
+                transition: 1s;
+            }
+            
+            .form-report .buttons input[type="submit"]:hover {
+                background-color: cadetblue;  
+            }
+            
+            .form-report .select-box {                
+                padding-bottom: 20px;            
+                display: inline-block;
+            }
+            
+            .form-report .select-box:last-child{                
+                padding-left: 10px;    
+            }
+            
+            .form-report .container {                
+                margin: 0 auto;  
+                max-width: 160px;
+            }
+            
+            .form-report h2 {
+                padding-bottom: 10px !important;
+                font-size: 20px !important;
+                text-align: center;
+                color: cornflowerblue;
+            }
+            
+                
+        </style>                                             
+        
+        <div class="form-report">                        
+            <form method="POST" action="reports_im_grpz.php" name="reportform" id="reportform">
+                <h2>Мастер отчётов для интернет-магазина</h2> 
+                <div class="container"> 
+                    <label>Выберите дату:</label>
+                    <div id="date"></div>
+                    <div class = "select-box">
+                        <select name="month" id="month">
+                            <option id="m1" value="1">Январь</option>
+                            <option value="2">Февраль</option>
+                            <option value="3">Март</option>
+                            <option value="4">Апрель</option>
+                            <option value="5">Май</option>
+                            <option value="6">Июнь</option>
+                            <option value="7">Июль</option>
+                            <option value="8">Август</option>
+                            <option value="9">Сентябрь</option>
+                            <option id="m11" value="10">Октябрь</option>
+                            <option value="11">Ноябрь</option>
+                            <option value="12">Декабрь</option>
+                        </select>
+                    </div>
+
+                    <div class="select-box">
+                        <select name="year" id="year">
+                            <option value="2015">2015</option>
+                            <option selected value="2016">2016</option>
+                            <option value="2017">2017</option>
+                            <option value="2018">2018</option>
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                        </select>
+                    </div>
+                    <label for="login">Логин:</label>
+                    <input type="text" name="login">
+                    <label for="password">Пароль:</label>
+                    <input type="password" name="password">
+                </div>    
+                <div class="buttons">
+                    <input type="submit" value="Сформировать отчёт">
+                </div>                 
+            </form>            
+        </div>
+        
+          <script type="text/javascript">
+            var cur_date = new Date();
+            var cur_month = cur_date.getMonth();
+            var cur_year = cur_date.getFullYear();  
+            if (cur_month == 0){
+                cur_month = 12;        
+                cur_year = cur_year - 1;
+            }
+            document.getElementById('month').value = cur_month;
+            document.getElementById('year').value = cur_year;               
+        </script>
+        
+    </body>
+</html>
